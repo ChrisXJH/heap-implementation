@@ -7,8 +7,8 @@ int main(int argc, char const *argv[]) {
   h.insert(2);
   h.insert(5);
   h.insert(4);
-  h.print();
+  std::cout << h << '\n';
   h.deleteMax();
-  h.print();
+  std::cout << h << '\n';
   return 0;
 }

@@ -5,7 +5,7 @@ class Heap {
 private:
   int size;
   std::vector<int> arr;
-  
+
   int root();
   int parent(const int index);
   int get(const int index);
@@ -26,5 +26,6 @@ public:
   void insert(const int num);
   int deleteMax();
   int getSize();
-  void print();
+
+  friend std::ostream &operator<<(std::ostream &out, Heap h);
 };

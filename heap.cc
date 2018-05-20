@@ -95,18 +95,18 @@ int Heap::deleteMax() {
   return max;
 }
 
-void Heap::print() {
+std::ostream &operator<<(std::ostream &out, Heap h) {
   bool first = true;
-  Heap temp{*this};
-  const int size = temp.getSize();
+  const int size = h.getSize();
   for (int i = 0; i < size; i++) {
     if (!first) {
-      std::cout << ",";
+      out << ",";
     }
     else {
       first = false;
     }
-    std::cout << temp.deleteMax();
+    out << h.deleteMax();
   }
-  std::cout << '\n';
+
+  return out;
 }
